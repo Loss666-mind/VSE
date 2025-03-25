@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSE - Регистрация</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/vaire.png">
+</head>
+<body>
+  <div class="app">
+    <div class="sidebar">
+      <h2>VSE register</h2>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="register.html">Регистрация</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>Регистрация</h1>
+      <div class="role-choice">
+        <button onclick="showForm('performer')">Я исполнитель</button>
+        <button onclick="showForm('customer')">Я заказчик</button>
+      </div>
+      <form id="performer-form" class="form hidden" onsubmit="register(event, 'performer')">
+        <input type="text" placeholder="ФИО" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Телефон" required>
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+      <form id="customer-form" class="form hidden" onsubmit="register(event, 'customer')">
+        <input type="text" placeholder="ФИО" required>
+        <input type="tel" placeholder="Телефон" required>
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

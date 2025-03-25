@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSE - Личный кабинет</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/vaire.png">
+</head>
+<body>
+  <div class="app">
+    <div class="sidebar">
+      <h2>Чат VSE</h2>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="dashboard-performer.html">Личный кабинет</a></li>
+      </ul>
+    </div>
+    <div class="content chat">
+      <div class="chat-list">
+        <h3>Сообщения</h3>
+        <div class="chat-item" onclick="openChat('Заказчик 1')">Заказчик 1: Новый заказ</div>
+        <div class="chat-item" onclick="openChat('Заказчик 2')">Заказчик 2: Вопрос</div>
+      </div>
+      <div class="chat-window">
+        <div id="chat-title">Выберите чат</div>
+        <div id="chat-messages"></div>
+        <textarea id="message-input" placeholder="Напишите сообщение..."></textarea>
+        <button onclick="sendMessage()">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
